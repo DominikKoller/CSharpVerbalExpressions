@@ -21,6 +21,21 @@ namespace CSharpVerbalExpressions
 {
     public class VerbalExpressions
     {
+        #region Constructors
+
+        public VerbalExpressions() { }
+
+        public VerbalExpressions(VerbalExpressions other)
+            : this()
+        {
+            _prefixes.Append(other._prefixes.ToString());
+            _source.Append(other._source.ToString());
+            _suffixes.Append(other._suffixes.ToString());
+            _modifiers = other._modifiers;
+        }
+
+        #endregion Constructors
+
         #region Statics
 
         /// <summary>
@@ -58,7 +73,7 @@ namespace CSharpVerbalExpressions
         }
 
         #endregion Private Properties
-        
+
         #region Public Methods
 
         #region Helpers
